@@ -99,7 +99,6 @@ seamlessclone = cv2.seamlessClone(result, img2, img2_head_mask, center_face2, cv
 ---
 
 ## 🧪 Sample Output
-### Input Image 1:
 Refer to the three screenshots attached....
 
 
