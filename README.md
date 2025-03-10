@@ -1,26 +1,32 @@
 # Face Swapping Model Using Deep Learning
 
-![Face Swap Demo](https://wallpapers.com/images/hd/shah-rukh-khan-classy-suit-xpxcz257rb1ple9l.jpg)
-
-## 🚀 Project Overview
-This project is a **Face Swapping Model** built using **Python**, **OpenCV**, and **Dlib**. It efficiently swaps faces between two given images while maintaining realistic blending using computer vision techniques.
-
-The model leverages facial landmark detection, triangulation, affine transformation, and seamless cloning to achieve precise and natural-looking face swaps.
+This project is a **Face Swapping Model** built using **Python**, **OpenCV**, and **Dlib** that performs seamless face-swapping by leveraging facial landmarks, triangulation, and image blending techniques.
 
 ---
 
-## 🧑‍💻 Features
-✅ Accurate face landmark detection using **Dlib's 68 landmark predictor**  
-✅ Efficient triangulation-based mapping for better facial structure alignment  
-✅ Natural blending with **`cv2.seamlessClone()`** for realistic integration  
-✅ Robust handling of complex face geometries and multiple face swaps  
-✅ Flexible structure allowing easy extension for live video feeds or webcam integration  
+## 🚀 Features
+- Accurate **face detection** and **landmark extraction** using **Dlib**.
+- Efficient triangulation for precise facial alignment.
+- **Affine transformations** for accurate face mapping.
+- Natural-looking output with **cv2.seamlessClone()**.
+- Supports real-time or image-based face swapping.
+
+---
+
+## 🛠️ Tech Stack
+- **Python 3.11**
+- **OpenCV**
+- **Dlib**
+- **PIL (Python Imaging Library)**
+- **NumPy**
+- **Requests**
 
 ---
 
 ## 📂 Project Structure
 ```
 face_swap_project/
+│
 ├── static/
 │   ├── css/
 │   │   └── style.css
@@ -39,101 +45,104 @@ face_swap_project/
 
 ---
 
-## 🔧 Installation Guide
+## 📥 Installation
 
-### Step 1: Clone the Repository
+1. **Clone the Repository**
 ```bash
-git clone https://github.com/<YourGitHubUsername>/<RepositoryName>.git
-cd <RepositoryName>
+git clone https://github.com/yourusername/face_swap_project.git
+cd face_swap_project
 ```
 
-### Step 2: Install Dependencies
-Install required packages from `requirements.txt`:
+2. **Create a Virtual Environment**
+```bash
+python -m venv venv
+source venv/bin/activate    # For Linux/Mac
+venv\Scripts\activate       # For Windows
+```
+
+3. **Install Dependencies**
 ```bash
 pip install -r requirements.txt
 ```
 
-### Step 3: Download Dlib Landmark Model
-Since Dlib's landmark model is large, download it using:
+4. **Download Dlib Landmark Model**
 ```bash
-wget https://github.com/davisking/dlib-models/raw/master/shape_predictor_68_face_landmarks.dat
-```
-Place this file in your project directory.
-
-### Step 4: Run the Project
-For Google Colab:
-```python
-from google.colab import drive
-drive.mount('/content/drive')
-%cd /content/drive/MyDrive/<Your_Project_Folder>
+wget 'https://github.com/tzutalin/dlib-android/raw/master/data/shape_predictor_68_face_landmarks.dat'
 ```
 
-For Local Environment:
+---
+
+## 🔄 Usage
+
+1. **Run the Application**
 ```bash
 python app.py
 ```
 
----
+2. **Input Images**
+- Add your face images in the `/uploads` folder or provide direct URLs within the code.
 
-## 📋 Usage
-1. Upload two face images for swapping.
-2. The model will:
-   - Detect facial landmarks using **Dlib**.
-   - Perform triangulation and affine transformation to align features.
-   - Use seamless cloning to merge faces naturally.
-3. The final swapped image will be displayed and saved in the `/uploads` folder.
+3. **Output**
+- The output image will be saved in the `/output` folder or displayed on screen, depending on your implementation.
 
 ---
 
-## 📷 Sample Images
-| Original Image 1 | Original Image 2 | Swapped Output |
-|:----------------:|:-----------------:|:---------------:|
-| ![Image 1](uploads/) | ![Image 2](uploads/Screenshot 2025-03-10 113909.png) | ![Result](uploads/) |
-
-
-## 🔎 Technical Details
-- **Face Landmark Detection:** Utilizes `dlib.get_frontal_face_detector()` for face detection and `dlib.shape_predictor()` for facial landmark detection.
-- **Triangulation & Warping:** Ensures each facial feature is aligned accurately for a smooth swap.
-- **Seamless Cloning:** Uses OpenCV’s `cv2.seamlessClone()` to blend the swapped face naturally into the target image.
+## 📋 Example Code Snippet
+```python
+# Creating seamless clone of two faces
+result = cv2.add(img2_head_noface, img2_new_face)
+(x, y, w, h) = cv2.boundingRect(convexhull2)
+center_face2 = (int((x + x + w) / 2), int((y + y + h) / 2))
+seamlessclone = cv2.seamlessClone(result, img2, img2_head_mask, center_face2, cv2.NORMAL_CLONE)
+```
 
 ---
 
-## 🧠 Challenges Faced & Solutions
-🔹 **Alignment Issues:** Improved by refining bounding box detection and adjusting triangle mask dimensions.  
-🔹 **Blending Artifacts:** Resolved by fine-tuning the seamless clone mask.  
-🔹 **Image Download Errors:** Added exception handling for invalid URLs.  
+## 🧪 Sample Output
+### Input Image 1:
+![Hrithik Roshan](https://www.celebritysizes.com/wp-content/uploads/2016/12/Hrithik-Roshan.jpg)
+
+### Input Image 2:
+![Man Image](https://cdn.pixabay.com/photo/2022/02/06/17/33/man-6997747_1280.jpg)
+
+### Output:
+*(Include your final output image here)*
 
 ---
 
-## 💡 Future Enhancements
-✅ Implement a **live webcam-based face swapping** feature.  
-✅ Add a **user interface (UI)** for smoother interaction.  
-✅ Incorporate **real-time face tracking** for enhanced performance.  
+## 🧩 Challenges Faced & Solutions
+✅ **Landmark Mismatch:** Resolved using precise triangulation logic and optimized alignment.  
+✅ **Blending Issues:** Improved results using **cv2.seamlessClone()** for natural-looking skin tone blending.  
+✅ **Image Scaling Problems:** Ensured both images are resized uniformly for better accuracy.
+
+---
+
+## 📜 Future Improvements
+- Adding **real-time face swapping** via webcam.
+- Implementing **GAN-based blending** for improved visual quality.
+- Introducing a **UI interface** for user-friendly interactions.
 
 ---
 
 ## 🤝 Contributing
-Contributions are welcome! Please follow these steps:
-1. Fork the repository.
-2. Create a feature branch (`git checkout -b feature-name`).
-3. Commit your changes (`git commit -m "Add new feature"`).
-4. Push to the branch (`git push origin feature-name`).
-5. Open a Pull Request.
+Contributions are welcome! If you have ideas or improvements, feel free to create a pull request or raise an issue.
 
 ---
 
-## 🏅 Credits
-- **OpenCV** for computer vision functions.  
-- **Dlib** for landmark detection.  
-- **Python** for logic and data manipulation.  
-
----
-
-## 📜 License
+## 📄 License
 This project is licensed under the **MIT License**.
 
 ---
 
-## 📬 Contact
-Feel free to connect with me via [LinkedIn](https://www.linkedin.com/in/<YourProfile>) or email at `<your.email@example.com>` if you have any questions or suggestions!
+## 📧 Contact
+For queries, feel free to reach out:
+- **Name:** Abhigyan Gopal Bhartariya
+- **Email:** [your_email@example.com](mailto:your_email@example.com)
+- **LinkedIn:** [Your LinkedIn Profile](https://linkedin.com/in/yourprofile)
+
+---
+
+### ⭐ If you find this project helpful, don't forget to give it a star!
+
+
 
