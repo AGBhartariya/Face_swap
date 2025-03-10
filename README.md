@@ -100,15 +100,8 @@ seamlessclone = cv2.seamlessClone(result, img2, img2_head_mask, center_face2, cv
 
 ## 🧪 Sample Output
 ### Input Image 1:
-![Hrithik Roshan](https://www.celebritysizes.com/wp-content/uploads/2016/12/Hrithik-Roshan.jpg)
+Refer to the three screenshots attached....
 
-### Input Image 2:
-![Man Image](https://cdn.pixabay.com/photo/2022/02/06/17/33/man-6997747_1280.jpg)
-
-### Output:
-
-
----
 
 ## 🧩 Challenges Faced & Solutions
 ✅ **Landmark Mismatch:** Resolved using precise triangulation logic and optimized alignment.  
