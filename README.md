@@ -88,7 +88,7 @@ python app.py
 ## 📷 Sample Images
 | Original Image 1 | Original Image 2 | Swapped Output |
 |:----------------:|:-----------------:|:---------------:|
-| ![Image 1](uploads/https://github.com/AGBhartariya/Face_swap/blob/main/Screenshot%202025-03-10%20113858.png) | ![Image 2](uploads/) | ![Result](uploads/) |
+| ![Image 1](uploads/) | ![Image 2](uploads/Screenshot 2025-03-10 113909.png) | ![Result](uploads/) |
 
 
 ## 🔎 Technical Details
