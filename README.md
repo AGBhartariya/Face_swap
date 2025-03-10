@@ -106,7 +106,7 @@ seamlessclone = cv2.seamlessClone(result, img2, img2_head_mask, center_face2, cv
 ![Man Image](https://cdn.pixabay.com/photo/2022/02/06/17/33/man-6997747_1280.jpg)
 
 ### Output:
-*(Include your final output image here)*
+
 
 ---
 
