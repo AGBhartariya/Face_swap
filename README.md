@@ -88,14 +88,8 @@ python app.py
 ## 📷 Sample Images
 | Original Image 1 | Original Image 2 | Swapped Output |
 |:----------------:|:-----------------:|:---------------:|
-| ![Image 1](uploads/sample_image1.png) | ![Image 2](uploads/sample_image2.png) | ![Result](uploads/swapped_result.png) |
+| ![Image 1](uploads/) | ![Image 2](uploads/) | ![Result](uploads/) |
 
-### 📸 Screenshots
-| Webcam Capture | Processing Result |
-|:---------------:|:-----------------:|
-| ![Webcam Image](uploads/webcam_image.png) | ![Processed Image](uploads/processed_image.png) |
-
----
 
 ## 🔎 Technical Details
 - **Face Landmark Detection:** Utilizes `dlib.get_frontal_face_detector()` for face detection and `dlib.shape_predictor()` for facial landmark detection.
