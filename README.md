@@ -130,7 +130,6 @@ This project is licensed under the **MIT License**.
 For queries, feel free to reach out:
 - **Name:** Abhigyan Gopal Bhartariya
 - **Email:** [your_email@example.com](mailto:abhigyangb27@gmail.com)
-- **LinkedIn:** [Your LinkedIn Profile](www.linkedin.com/in/abhigyan-bhartariya-73267928a)
 
 ---
 
